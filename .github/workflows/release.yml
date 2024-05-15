@@ -1,5 +1,6 @@
-name: Upload Website
-
+name: Semantic Release
+# https://medium.com/agoda-engineering/automating-versioning-and-releases-using-semantic-release-6ed355ede742
+# https://semantic-release.gitbook.io/semantic-release/recipes/ci-configurations/github-actions
 on:
   push:
     branches: [ "main" ]
@@ -24,7 +25,6 @@ jobs:
         with:
           node-version: '20'
 
-      
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
