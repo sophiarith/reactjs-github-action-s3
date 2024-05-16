@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Hello</h1>
+      <h1>Hello{process.env.REACT_APP_AWS_APPSYNC_REGION}</h1>
+      <h1>Hello{process.env.REACT_APP_AWS_E}</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
