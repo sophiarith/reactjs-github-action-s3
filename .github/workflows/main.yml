@@ -9,7 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      REACT_APP_AWS_APPSYNC_REGION: 'REACT_APP_AWS_APPSYNC_REGION'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
