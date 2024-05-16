@@ -10,7 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      REACT_APP_AWS_APPSYNC_REGION: 'REACT_APP_AWS_APPSYNC_REGION'
+      # REACT_APP_AWS_APPSYNC_REGION: 'REACT_APP_AWS_APPSYNC_REGION'
+      REACT_APP_AWS_E: ${{ secrets.REACT_APP_AWS_E }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,10 +25,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Create .env file
-        uses: ozaytsev86/create-env-file@v1
-        with:
-          ENV_REACT_APP_AWS_E: ${{ secrets.REACT_APP_AWS_E }}
+      # - name: Create .env file
+      #   uses: ozaytsev86/create-env-file@v1
+      #   with:
+      #     ENV_REACT_APP_AWS_E: ${{ secrets.REACT_APP_AWS_E }}
 
       - name: Build app
         run: npm run build
