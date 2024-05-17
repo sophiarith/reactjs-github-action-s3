@@ -8,7 +8,7 @@ test('renders button with label', () => {
   render(<Button label="Click Me" onClick={() => {}} />);
   
   // Query the button element and check if it is in the document
-  const buttonElement = screen.getByText(/click me button/i);
+  const buttonElement = screen.getByText(/click me/i);
   expect(buttonElement).toBeInTheDocument();
 });
 
